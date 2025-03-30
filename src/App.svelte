@@ -104,15 +104,15 @@
 
     // 상단 홍보문구
     page.drawText(values[16], {
-      x: (width - font.widthOfTextAtSize(values[16], 10)) / 2,
+      x: (width - font.widthOfTextAtSize(values[16] || "자몽과 함께하는 행복한 대한보안", 10)) / 2,
       y: height - 100,
       size: 10,
       font,
     });
 
     // 기관 이름
-    page.drawText(values[0] || "고촌중학교", {
-      x: (width - font.widthOfTextAtSize(values[0] || "고촌중학교", 18)) / 2,
+    page.drawText(values[0] || "Team Jamong", {
+      x: (width - font.widthOfTextAtSize(values[0] || "Team Jamong", 18)) / 2,
       y: height - 140,
       size: 18,
       font,
@@ -204,10 +204,10 @@
     }
     if (approvers.length < 1)
       approvers.push(
-        ["이선민", "교사"],
-        ["조우민", "교사"],
-        ["한은지", "교감"],
-        ["신문용", "교장"]
+        ["오건우", "인턴"],
+        ["박기범", "부장"],
+        ["임세훈", "대표"],
+        ["박하준", "대표"]
       );
 
     approvers.forEach(([name, title], i) => {
@@ -252,7 +252,7 @@
 
     // 하단 정보
     page.drawText(
-      `시행 ${values[2] || "고촌중학교-5329"}\t\t\t\t(\t\t\t\t\t)\t\t접수\t\t\t\t\t\t\t\t\t\t(\t\t\t\t\t)`,
+      `시행 ${values[2] || "팀 자몽-5329"}\t\t\t\t(\t\t\t\t\t)\t\t접수\t\t\t\t\t\t\t\t\t\t(\t\t\t\t\t)`,
       {
         x: 50,
         y: height - 750,
@@ -261,7 +261,7 @@
       }
     );
     page.drawText(
-      `우 ${values[18] || "10124 경기도 김포시 고촌읍 신곡로 106"}\t\t\t\t/\t${values[19]}`,
+      ``,
       {
         x: 50,
         y: height - 770,
@@ -270,7 +270,7 @@
       }
     );
     page.drawText(
-      `전화 ${values[20] || "031-123-4567"}\t\t\t/전송 ${values[21] || "031-123-4567"}\t\t\t/ ${values[22]}\t\t\t/ 공개`,
+      `전화 ${values[20] || "0507-1330-8632"}\t\t\t/전송 ${values[21] || "031-123-4567"}\t\t\t/ ${values[22]}\t\t\t/ 공개`,
       {
         x: 50,
         y: height - 790,
